@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.rst', 'r') as f:
     long_description = f.read()
 
 setup(
     name='emojis',
-    version='0.2.0',
+    version='0.3.0',
     author='Alexandre Vicenzi',
     author_email='pypi@alxd.me',
     maintainer='Alexandre Vicenzi',
     maintainer_email='pypi@alxd.me',
-    packages=['emojis'],
+    packages=find_packages(exclude=("tests",)),
     url='https://github.com/alexandrevicenzi/emojis',
     bugtrack_url='https://github.com/alexandrevicenzi/emojis/issues',
     license='MIT',
