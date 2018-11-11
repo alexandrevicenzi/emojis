@@ -1,7 +1,7 @@
-.PHONY: build upgrade db test clean
+.PHONY: setup build upload db test clean
 
 setup:
-	pip3 install --upgrade setuptools wheel twine
+	pip3 install --upgrade requests setuptools wheel twine
 
 build: clean
 	pandoc README.md -o README.rst
@@ -11,7 +11,7 @@ upload:
 	twine upload dist/*
 
 db:
-	python3 -m emojis.db.generator --dir ./emojis/db/ --dbname db.py
+	python3 ./emojis/db/generator.py --dir ./emojis/db/ --dbname db.py
 
 test:
 	python3 -m tests.test -v

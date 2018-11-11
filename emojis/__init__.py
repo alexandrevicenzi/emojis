@@ -1,4 +1,3 @@
-__all__ = ['encode', 'decode', 'get', 'count', 'db']
+__all__ = ['encode', 'decode', 'get', 'count']
 
 from .emojis import encode, decode, get, count
-from .db import utils as db

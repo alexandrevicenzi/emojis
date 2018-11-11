@@ -1,7 +1,7 @@
 import unittest
 
 from emojis import emojis
-from emojis.db import utils
+from emojis import db
 
 class TestEmoji(unittest.TestCase):
 
@@ -14,8 +14,8 @@ class TestEmoji(unittest.TestCase):
         self.assertEqual(msg, 'This is a message with emojis :smile: :heart:')
 
     def test_get(self):
-        em = emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
-        self.assertEqual(em, {'😄', '❤️'})
+        emoji = emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
+        self.assertEqual(emoji, {'😄', '❤️'})
 
     def test_count(self):
         count = emojis.count('😄 ❤️ 😄 ❤️')
@@ -29,44 +29,46 @@ class TestEmoji(unittest.TestCase):
 class TestDBUtils(unittest.TestCase):
 
     def test_get_emoji_alias(self):
-        aliases = utils.get_emoji_aliases()
+        aliases = db.get_emoji_aliases()
         self.assertIsInstance(aliases, dict)
         self.assertTrue(len(aliases) > 0)
 
     def test_get_emoji_by_code(self):
-        em = utils.get_emoji_by_code('😄')
-        self.assertEqual(em.aliases[0], 'smile')
+        emoji = db.get_emoji_by_code('😄')
+        self.assertIsInstance(emoji, db.Emoji)
+        self.assertEqual(emoji.aliases[0], 'smile')
 
     def test_get_emoji_by_alias(self):
-        em = utils.get_emoji_by_alias('smile')
-        self.assertEqual(em.emoji, '😄')
+        emoji = db.get_emoji_by_alias('smile')
+        self.assertIsInstance(emoji, db.Emoji)
+        self.assertEqual(emoji.emoji, '😄')
 
     def test_get_emojis_by_tag(self):
-        emojis = list(utils.get_emojis_by_tag('happy'))
-        self.assertTrue(len(emojis) > 0)
+        emoji_list = list(db.get_emojis_by_tag('happy'))
+        self.assertTrue(len(emoji_list) > 0)
 
     def test_get_emojis_by_invalid_tag(self):
-        emojis = list(utils.get_emojis_by_tag('invalid'))
-        self.assertEqual(len(emojis), 0)
+        emoji_list = list(db.get_emojis_by_tag('invalid'))
+        self.assertEqual(len(emoji_list), 0)
 
     def test_get_emojis_by_category(self):
-        emojis = list(utils.get_emojis_by_category('People'))
-        self.assertTrue(len(emojis) > 0)
+        emoji_list = list(db.get_emojis_by_category('People'))
+        self.assertTrue(len(emoji_list) > 0)
 
     def test_get_emojis_by_category_case_insensitive(self):
-        emojis = list(utils.get_emojis_by_category('people'))
-        self.assertTrue(len(emojis) > 0)
+        emoji_list = list(db.get_emojis_by_category('people'))
+        self.assertTrue(len(emoji_list) > 0)
 
     def test_get_emojis_by_invalid_category(self):
-        emojis = list(utils.get_emojis_by_category('Invalid'))
-        self.assertEqual(len(emojis), 0)
+        emoji_list = list(db.get_emojis_by_category('Invalid'))
+        self.assertEqual(len(emoji_list), 0)
 
     def test_get_tags(self):
-        tags = list(utils.get_tags())
+        tags = list(db.get_tags())
         self.assertTrue(len(tags) > 0)
 
     def test_get_categories(self):
-        categories = list(utils.get_categories())
+        categories = list(db.get_categories())
         self.assertTrue(len(categories) > 0)
 
 

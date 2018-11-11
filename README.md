@@ -29,6 +29,12 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 
 >>> emojis.count('😄 🐍 😄 🐍', unique=True)
 2
+
+>>> emojis.db.get_emoji_by_alias('snake')
+Emoji(aliases=['snake'], emoji='🐍', tags=[], category='Nature')
+
+>>> emojis.db.get_categories()
+['Activity', 'Flags', 'Foods', 'Nature', 'Objects', 'People', 'Places', 'Symbols']
 ```
 
 ## Installation
@@ -36,6 +42,10 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 Install `emojis` with `pip`.
 
 `pip3 install -U emojis`
+
+## Documentation
+
+TODO
 
 ## License
 
