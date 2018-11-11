@@ -5,10 +5,10 @@ from .db import utils
 ALIAS_TO_EMOJI = utils.get_emoji_aliases()
 EMOJI_TO_ALIAS = dict((v, k) for k, v in ALIAS_TO_EMOJI.items())
 
-RE_TEXT_TO_EMOJI_GROUP = '|'.join(['({0})'.format(alias) for alias in ALIAS_TO_EMOJI])
+RE_TEXT_TO_EMOJI_GROUP = '({0})'.format('|'.join(ALIAS_TO_EMOJI))
 RE_TEXT_TO_EMOJI = re.compile(RE_TEXT_TO_EMOJI_GROUP)
 
-RE_EMOJI_TO_TEXT_GROUP = '|'.join(['({0})'.format(re.escape(emoji)) for emoji in EMOJI_TO_ALIAS])
+RE_EMOJI_TO_TEXT_GROUP = '({0})'.format('|'.join([re.escape(emoji) for emoji in EMOJI_TO_ALIAS]))
 RE_EMOJI_TO_TEXT = re.compile(RE_EMOJI_TO_TEXT_GROUP)
 
 
