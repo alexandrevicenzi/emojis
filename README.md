@@ -1,4 +1,4 @@
-# Emojis
+# Emojis [![Build Status](https://travis-ci.org/alexandrevicenzi/emojis.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/emojis)
 
 Emojis for Python
 
