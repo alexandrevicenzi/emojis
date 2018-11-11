@@ -1,4 +1,4 @@
-.PHONY: build upgrade db clean
+.PHONY: build upgrade db test clean
 
 setup:
 	pip3 install --upgrade setuptools wheel twine
@@ -12,6 +12,9 @@ upload:
 
 db:
 	python3 -m emojis.db.generator --dir ./emojis/db/ --dbname db.py
+
+test:
+	python3 -m tests.test -v
 
 clean:
 	rm -rf build
