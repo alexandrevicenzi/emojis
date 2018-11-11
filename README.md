@@ -4,7 +4,7 @@ Emojis for Python
 
 ## About
 
-This library allows you to emojify content such as: `This is a message with emojis :smile: :heart:`
+This library allows you to emojify content such as: `This is a message with emojis :smile: :snake:`
 
 See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) for more aliases.
 
@@ -15,19 +15,19 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 ```python
 >>> import emojis
 
->>>  emojis.encode('This is a message with emojis :smile: :heart:')
-'This is a message with emojis 😄 ❤️'
+>>>  emojis.encode('This is a message with emojis :smile: :snake:')
+'This is a message with emojis 😄 🐍'
 
->>> emojis.decode('This is a message with emojis 😄 ❤️')
-'This is a message with emojis :smile: :heart:'
+>>> emojis.decode('This is a message with emojis 😄 🐍')
+'This is a message with emojis :smile: :snake:'
 
->>> emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
-{'😄', '❤️'}
+>>> emojis.get('Prefix 😄 🐍 😄 🐍 Sufix')
+{'😄', '🐍'}
 
->> emojis.count('😄 ❤️ 😄 ❤️')
+>> emojis.count('😄 🐍 😄 🐍')
 4
 
->>> emojis.count('😄 ❤️ 😄 ❤️', unique=True)
+>>> emojis.count('😄 🐍 😄 🐍', unique=True)
 2
 ```
 
