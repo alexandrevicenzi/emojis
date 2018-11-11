@@ -4,7 +4,7 @@ Emojis for Python
 
 ## About
 
-This library allows you to emojify content such as: _This is a message with emojis :smile: :heart:_
+This library allows you to emojify content such as: `This is a message with emojis :smile: :heart:`
 
 See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) for more aliases.
 
