@@ -15,7 +15,7 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 ```python
 >>> import emojis
 
->>>  emojis.encode('This is a message with emojis :smile: :snake:')
+>>> emojis.encode('This is a message with emojis :smile: :snake:')
 'This is a message with emojis 😄 🐍'
 
 >>> emojis.decode('This is a message with emojis 😄 🐍')
@@ -24,7 +24,7 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 >>> emojis.get('Prefix 😄 🐍 😄 🐍 Sufix')
 {'😄', '🐍'}
 
->> emojis.count('😄 🐍 😄 🐍')
+>>> emojis.count('😄 🐍 😄 🐍')
 4
 
 >>> emojis.count('😄 🐍 😄 🐍', unique=True)

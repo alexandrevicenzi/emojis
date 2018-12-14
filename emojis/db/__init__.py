@@ -1,3 +1,7 @@
+'''
+Emoji database.
+'''
+
 __all__ = [
     'Emoji',
     'get_emoji_aliases',
