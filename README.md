@@ -1,4 +1,4 @@
-# Emojis [![Build Status](https://travis-ci.org/alexandrevicenzi/emojis.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/emojis) [![PyPI](https://img.shields.io/pypi/v/emojis.svg)](https://pypi.org/project/emojis/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/emojis.svg)](https://pypi.org/project/emojis/)
+# Emojis [![Documentation Status](https://readthedocs.org/projects/emojis/badge/?version=latest)](https://emojis.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://travis-ci.org/alexandrevicenzi/emojis.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/emojis) [![PyPI](https://img.shields.io/pypi/v/emojis.svg)](https://pypi.org/project/emojis/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/emojis.svg)](https://pypi.org/project/emojis/)
 
 Emojis for Python
 
@@ -45,7 +45,7 @@ Install `emojis` with `pip`.
 
 ## Documentation
 
-TODO
+[https://emojis.readthedocs.io/](https://emojis.readthedocs.io/en/latest/)
 
 ## License
 
