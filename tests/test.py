@@ -9,9 +9,18 @@ class TestEmoji(unittest.TestCase):
         msg = emojis.encode('This is a message with emojis :smile: :heart:')
         self.assertEqual(msg, 'This is a message with emojis 😄 ❤️')
 
+    def test_encode_aliases(self):
+        msg1 = emojis.encode(':+1:')
+        msg2 = emojis.encode(':thumbsup:')
+        self.assertEqual(msg1, msg2)
+
     def test_decode(self):
         msg = emojis.decode('This is a message with emojis 😄 ❤️')
         self.assertEqual(msg, 'This is a message with emojis :smile: :heart:')
+
+    def test_decode_aliases(self):
+        msg = emojis.decode('👍')
+        self.assertEqual(msg, ':thumbsup:')
 
     def test_get(self):
         emoji = emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
