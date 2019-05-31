@@ -28,10 +28,10 @@ Sample Code
     2
 
     >>> emojis.db.get_emoji_by_alias('snake')
-    Emoji(aliases=['snake'], emoji='🐍', tags=[], category='Nature')
+    Emoji(aliases=['snake'], emoji='🐍', tags=[], category='Animals & Nature')
 
     >>> emojis.db.get_categories()
-    ['Activity', 'Flags', 'Foods', 'Nature', 'Objects', 'People', 'Places', 'Symbols']
+    {'Activities', 'Travel & Places', 'Smileys & Emotion', 'Symbols', 'Food & Drink', 'Animals & Nature', 'People & Body', 'Objects', 'Flags'}
 
 
 Main Functions

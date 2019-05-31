@@ -61,11 +61,11 @@ class TestDBUtils(unittest.TestCase):
         self.assertEqual(len(emoji_list), 0)
 
     def test_get_emojis_by_category(self):
-        emoji_list = list(db.get_emojis_by_category('People'))
+        emoji_list = list(db.get_emojis_by_category('People & Body'))
         self.assertTrue(len(emoji_list) > 0)
 
     def test_get_emojis_by_category_case_insensitive(self):
-        emoji_list = list(db.get_emojis_by_category('people'))
+        emoji_list = list(db.get_emojis_by_category('people & body'))
         self.assertTrue(len(emoji_list) > 0)
 
     def test_get_emojis_by_invalid_category(self):
