@@ -20,7 +20,7 @@ class TestEmoji(unittest.TestCase):
 
     def test_decode_aliases(self):
         msg = emojis.decode('👍')
-        self.assertEqual(msg, ':thumbsup:')
+        self.assertTrue(msg in [':+1:', ':thumbsup:'])
 
     def test_get(self):
         emoji = emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
