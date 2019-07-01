@@ -26,6 +26,10 @@ class TestEmoji(unittest.TestCase):
         emoji = emojis.get('Prefix 😄 ❤️ 😄 ❤️ Sufix')
         self.assertEqual(emoji, {'😄', '❤️'})
 
+    def test_get_multi_character(self):
+        emoji = emojis.get('Prefix 👨‍🎓 👨‍🎓 Sufix')
+        self.assertEqual(emoji, {'👨‍🎓'})
+
     def test_count(self):
         count = emojis.count('😄 ❤️ 😄 ❤️')
         self.assertEqual(count, 4)
