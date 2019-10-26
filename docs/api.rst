@@ -12,7 +12,7 @@ Sample Code
 
     >>> import emojis
 
-    >>> emojis.encode('This is a message with emojis :smile: :snake:')
+    >>> emojis.encode('This is a message with emojis :smiling-face: :snake:')
     'This is a message with emojis 😄 🐍'
 
     >>> emojis.decode('This is a message with emojis 😄 🐍')
