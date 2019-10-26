@@ -6,9 +6,9 @@ Emojis for Python
 
 This library allows you to emojify content such as: `This is a message with emojis :smile: :snake:`
 
-See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) for more aliases.
+Emoji database based on [gemoji](https://github.com/github/gemoji) library.
 
-Emoji database based on [gemoji](https://github.com/github/gemoji).
+See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) for more examples.
 
 ## Example
 
@@ -31,7 +31,7 @@ Emoji database based on [gemoji](https://github.com/github/gemoji).
 2
 
 >>> emojis.db.get_emoji_by_alias('snake')
-Emoji(aliases=['snake'], emoji='🐍', tags=[], category='Animals & Nature')
+Emoji(aliases=['snake'], emoji='🐍', tags=[], category='Animals & Nature', unicode_version='6.0')
 
 >>> emojis.db.get_categories()
 {'Activities', 'Travel & Places', 'Smileys & Emotion', 'Symbols', 'Food & Drink', 'Animals & Nature', 'People & Body', 'Objects', 'Flags'}
