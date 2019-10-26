@@ -5,7 +5,7 @@ from datetime import datetime
 
 import requests
 
-JSON_DB_FILE = 'https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json'
+JSON_DB_FILE = 'https://raw.githubusercontent.com/nitanmarcel/Emojis-DB/master/all_emojis.json'
 
 def generate(path, dbname):
     req = requests.get(JSON_DB_FILE)
@@ -28,12 +28,12 @@ def generate(path, dbname):
         file.write('EMOJI_DB = [\n')
 
         for emoji in data:
-            if 'emoji' in emoji:
-                file.write('    Emoji({aliases}, "{emoji}", {tags}, "{category}"),\n'.format(**{
-                    'aliases': emoji['aliases'],
-                    'emoji': emoji['emoji'],
-                    'tags': emoji['tags'],
-                    'category': emoji['category'],
+            if 'characters' in emoji:
+                file.write('    Emoji(["{aliases}"], "{emoji}", {tags}, "{category}"),\n'.format(**{
+                    'aliases': '-'.join(emoji['name'].split()),
+                    'emoji': emoji['characters'],
+                    'tags': emoji['en_keywords'],
+                    'category': emoji['category_name'],
                 }))
 
         file.write(']\n')
