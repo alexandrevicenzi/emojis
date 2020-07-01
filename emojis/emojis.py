@@ -59,7 +59,7 @@ def get(msg):
 
 def iter(msg):
     '''
-    Returns unique Emojis in the given string by order.
+    Iterates over all Emojis found in the message.
 
     :param msg: String to search for Emojis.
     :rtype: iterator
