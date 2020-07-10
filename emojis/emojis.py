@@ -54,7 +54,17 @@ def get(msg):
     :param msg: String to search for Emojis.
     :rtype: set
     '''
-    return {match.group() for match in  RE_EMOJI_TO_TEXT.finditer(msg)}
+    return {match.group() for match in RE_EMOJI_TO_TEXT.finditer(msg)}
+
+
+def iter(msg):
+    '''
+    Iterates over all Emojis found in the message.
+
+    :param msg: String to search for Emojis.
+    :rtype: iterator
+    '''
+    return (match.group() for match in RE_EMOJI_TO_TEXT.finditer(msg))
 
 
 def count(msg, unique=False):
