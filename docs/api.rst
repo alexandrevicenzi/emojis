@@ -42,6 +42,7 @@ Main Functions
 .. autofunction:: encode
 .. autofunction:: decode
 .. autofunction:: get
+.. autofunction:: iter
 .. autofunction:: count
 
 Database Functions
