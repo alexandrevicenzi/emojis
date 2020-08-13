@@ -7,7 +7,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='emojis',
-    version='0.5.1',
+    version='0.6.0',
     author='Alexandre Vicenzi',
     author_email='pypi@alxd.me',
     maintainer='Alexandre Vicenzi',
