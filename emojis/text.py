@@ -1,8 +1,8 @@
 import re
 
-from . import db
+from emojis.utils import get_emoji_aliases
 
-ALIAS_TO_EMOJI = db.get_emoji_aliases()
+ALIAS_TO_EMOJI = get_emoji_aliases()
 EMOJI_TO_ALIAS = dict((v, k) for k, v in ALIAS_TO_EMOJI.items())
 EMOJI_TO_ALIAS_SORTED = sorted(ALIAS_TO_EMOJI.values(), key=len, reverse=True)
 

@@ -1,4 +1,4 @@
-from . import db
+from emojis.emojidb import EMOJI_DB
 
 def get_emoji_aliases():
     '''
@@ -8,7 +8,7 @@ def get_emoji_aliases():
     '''
     emoji_aliases = {}
 
-    for emoji in db.EMOJI_DB:
+    for emoji in EMOJI_DB:
         for alias in emoji.aliases:
             alias = ':{0}:'.format(alias)
             emoji_aliases[alias] = emoji.emoji
@@ -24,7 +24,7 @@ def get_emoji_by_code(code):
     :rtype: emojis.db.Emoji
     '''
     try:
-        return next(filter(lambda emoji: code == emoji.emoji, db.EMOJI_DB))
+        return next(filter(lambda emoji: code == emoji.emoji, EMOJI_DB))
     except StopIteration:
         return None
 
@@ -37,7 +37,7 @@ def get_emoji_by_alias(alias):
     :rtype: emojis.db.Emoji
     '''
     try:
-        return next(filter(lambda emoji: alias in emoji.aliases, db.EMOJI_DB))
+        return next(filter(lambda emoji: alias in emoji.aliases, EMOJI_DB))
     except StopIteration:
         return None
 
@@ -49,7 +49,7 @@ def get_emojis_by_tag(tag):
     :param tag: Tag name to filter (case-insensitive).
     :rtype: iter
     '''
-    return filter(lambda emoji: tag.lower() in emoji.tags, db.EMOJI_DB)
+    return filter(lambda emoji: tag.lower() in emoji.tags, EMOJI_DB)
 
 
 def get_emojis_by_category(category):
@@ -59,7 +59,7 @@ def get_emojis_by_category(category):
     :param tag: Category name to filter (case-insensitive).
     :rtype: iter
     '''
-    return filter(lambda emoji: category.lower() == emoji.category.lower(), db.EMOJI_DB)
+    return filter(lambda emoji: category.lower() == emoji.category.lower(), EMOJI_DB)
 
 
 def get_tags():
@@ -68,7 +68,7 @@ def get_tags():
 
     :rtype: set
     '''
-    return {tag for emoji in db.EMOJI_DB for tag in emoji.tags}
+    return {tag for emoji in EMOJI_DB for tag in emoji.tags}
 
 def get_categories():
     '''
@@ -76,4 +76,4 @@ def get_categories():
 
     :rtype: set
     '''
-    return {emoji.category for emoji in db.EMOJI_DB}
+    return {emoji.category for emoji in EMOJI_DB}

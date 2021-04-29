@@ -56,9 +56,9 @@ def generate(path, dbname):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Generates the Emoji database.')
-    parser.add_argument('--dir', default='.', help='Database location')
-    parser.add_argument('--dbname', default='db.py', help='Database location')
+    parser = argparse.ArgumentParser(description='Generates the Emoji database')
+    parser.add_argument('--dir', default='./emojis', help='Database location')
+    parser.add_argument('--dbname', default='emojidb.py', help='Database location')
     args = parser.parse_args()
 
     generate(args.dir, args.dbname)
