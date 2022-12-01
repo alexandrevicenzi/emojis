@@ -7,7 +7,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='emojis',
-    version='0.6.0',
+    version='0.7.0',
     author='Alexandre Vicenzi',
     author_email='pypi@alxd.me',
     maintainer='Alexandre Vicenzi',
@@ -30,6 +30,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'License :: OSI Approved :: MIT License',
         'Operating System :: MacOS',
         'Operating System :: Microsoft',
