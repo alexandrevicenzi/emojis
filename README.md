@@ -1,7 +1,7 @@
 # Emojis
 
 [![Documentation Status](https://readthedocs.org/projects/emojis/badge/?version=latest)](https://emojis.readthedocs.io/en/latest/?badge=latest)
-[![Build Status](https://travis-ci.org/alexandrevicenzi/emojis.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/emojis)
+[![Build Status](https://github.com/alexandrevicenzi/emojis/actions/workflows/test.yml/badge.svg)](https://github.com/alexandrevicenzi/emojis/actions/workflows/test.yml)
 [![PyPI](https://img.shields.io/pypi/v/emojis.svg)](https://pypi.org/project/emojis/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/emojis.svg)](https://pypi.org/project/emojis/)
 
@@ -12,8 +12,6 @@ Emojis for Python
 This library allows you to emojify content such as: `This is a message with emojis :smile: :snake:`
 
 Emoji database is based on [gemoji](https://github.com/github/gemoji) library.
-
-See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) for more examples.
 
 ## Example
 
